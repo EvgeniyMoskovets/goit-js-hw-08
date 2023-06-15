@@ -32,6 +32,10 @@ gallery.insertAdjacentHTML('afterbegin', GalleryCards);
 
 gallery.addEventListener('click', onTargetClick);
 
+const lightbox = new SimpleLightbox('.gallery a', {
+  /* options */
+});
+
 function onTargetClick(e) {
   e.preventDefault();
   const imgSelect = e.target.classList.contains('gallery__image');
@@ -40,17 +44,6 @@ function onTargetClick(e) {
   if (!imgSelect) {
     return;
   } else {
-    let lightbox = new SimpleLightbox('.gallery a');
-    lightbox.create(`<img src="${originalImg}" width="800" height="600">`);
-    lightbox.show();
-
-    document.addEventListener('keydown', onEscKeyPress);
-
-    function onEscKeyPress(e) {
-      if (e.key === 'Escape') {
-        lightbox.close();
-        document.removeEventListener('keydown', onEscKeyPress);
-      }
-    }
+    lightbox;
   }
 }
