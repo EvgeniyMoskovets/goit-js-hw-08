@@ -7,7 +7,7 @@ import { galleryItems } from './gallery-items';
 console.log(galleryItems);
 
 const gallery = document.querySelector('.gallery');
-const GalleryCards = createGalleryCards(galleryItems);
+const galleryCards = createGalleryCards(galleryItems);
 
 function createGalleryCards(galleryItems) {
   return galleryItems
@@ -28,7 +28,7 @@ function createGalleryCards(galleryItems) {
     .join('');
 }
 
-gallery.insertAdjacentHTML('afterbegin', GalleryCards);
+gallery.insertAdjacentHTML('afterbegin', galleryCards);
 
 gallery.addEventListener('click', onTargetClick);
 
