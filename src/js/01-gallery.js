@@ -5,6 +5,7 @@ import { galleryItems } from './gallery-items';
 // Change code below this line
 
 const gallery = document.querySelector('.gallery');
+const galleryCards = createGalleryCards(galleryItems);
 
 function createGalleryCards(galleryItems) {
   return galleryItems
@@ -25,4 +26,8 @@ function createGalleryCards(galleryItems) {
     .join('');
 }
 
-gallery.insertAdjacentHTML('afterbegin', createGalleryCards);
+gallery.insertAdjacentHTML('afterbegin', galleryCards);
+
+const lightbox = new SimpleLightbox('.gallery a', {
+  /* options */
+});
