@@ -30,5 +30,3 @@ player
         break;
     }
   });
-
-localStorage.setItem('videoplayer-current-time');

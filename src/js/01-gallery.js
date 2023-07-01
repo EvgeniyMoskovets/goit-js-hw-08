@@ -4,10 +4,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import { galleryItems } from './gallery-items';
 // Change code below this line
 
-console.log(galleryItems);
-
 const gallery = document.querySelector('.gallery');
-const galleryCards = createGalleryCards(galleryItems);
 
 function createGalleryCards(galleryItems) {
   return galleryItems
@@ -28,22 +25,4 @@ function createGalleryCards(galleryItems) {
     .join('');
 }
 
-gallery.insertAdjacentHTML('afterbegin', galleryCards);
-
-gallery.addEventListener('click', onTargetClick);
-
-const lightbox = new SimpleLightbox('.gallery a', {
-  /* options */
-});
-
-function onTargetClick(e) {
-  e.preventDefault();
-  const imgSelect = e.target.classList.contains('gallery__image');
-  const originalImg = e.target.dataset.source;
-
-  if (!imgSelect) {
-    return;
-  } else {
-    lightbox;
-  }
-}
+gallery.insertAdjacentHTML('afterbegin', createGalleryCards);

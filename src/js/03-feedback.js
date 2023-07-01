@@ -26,8 +26,7 @@ function onFormSubmit(e) {
   if (mail === '' || message === '') {
     return alert('всі поля повинні бути заповнені');
   }
-  console.log(mail);
-  console.log(message);
+  console.log(formValue);
 
   localStorage.removeItem('feedback-form-state');
 
