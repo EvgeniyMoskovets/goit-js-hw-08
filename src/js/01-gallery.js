@@ -31,3 +31,9 @@ gallery.insertAdjacentHTML('afterbegin', galleryCards);
 const lightbox = new SimpleLightbox('.gallery a', {
   /* options */
 });
+
+if (!imgSelect) {
+  return;
+} else {
+  lightbox;
+}
