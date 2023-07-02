@@ -32,8 +32,4 @@ const lightbox = new SimpleLightbox('.gallery a', {
   /* options */
 });
 
-if (!imgSelect) {
-  return;
-} else {
-  lightbox;
-}
+
